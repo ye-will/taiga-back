@@ -1,7 +1,5 @@
 FROM python:3.4
 
-MAINTAINER Will Ye <yeah_well@live.com>
-
 EXPOSE 8000
 
 VOLUME  /taiga/media
@@ -25,5 +23,7 @@ RUN pip install --no-cache-dir -r plugins.txt
 # Copy source & config
 COPY . .
 RUN mv settings/local.py.docker ./settings/local.py
+
+RUN useradd -d /taiga taiga
 
 CMD ["./docker-entrypoint.sh"]
