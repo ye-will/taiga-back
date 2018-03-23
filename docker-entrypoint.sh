@@ -12,7 +12,7 @@ taiga::start() {
   if [ ! -f /tmp/taiga-init.lock ]; then
     taiga::init >> /tmp/taiga-init.lock
   fi
-  chown -R taiga /taiga
+  chown -R taiga:taiga /taiga
   su taiga << EOF
     gunicorn -w 3 -t 60 --pythonpath=. -b 0.0.0.0:8000 taiga.wsgi
 EOF
