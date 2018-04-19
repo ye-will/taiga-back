@@ -1,10 +1,21 @@
 # Changelog
 
+## Unreleased
+
+## 3.2.3 (2018-04-04)
+
+### Misc
+
+- Fix milestone burndown graph with empty US.
+- Upgrade markdown library to solve bug.
+- Update locales.
+
 ## 3.2.2 (2018-03-15)
 
 ### Misc
 
 - Minor bug fixes.
+
 
 ## 3.2.0 Betula nana (2018-03-07)
 
