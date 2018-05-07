@@ -65,6 +65,7 @@ class UserStoryViewSet(OCCResourceMixin, VotedResourceMixin, HistoryResourceMixi
                        base_filters.RoleFilter,
                        base_filters.OwnersFilter,
                        base_filters.AssignedToFilter,
+                       base_filters.AssignedUsersFilter,
                        base_filters.StatusesFilter,
                        base_filters.TagsFilter,
                        base_filters.WatchersFilter,
@@ -127,7 +128,6 @@ class UserStoryViewSet(OCCResourceMixin, VotedResourceMixin, HistoryResourceMixi
                                include_attachments=include_attachments,
                                include_tasks=include_tasks,
                                epic_id=epic_id)
-
         return qs
 
     def pre_conditions_on_save(self, obj):
